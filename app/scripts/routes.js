@@ -11,14 +11,32 @@ angular
       .state('homepage', {
         url: '/',
         views: {
-          navbar: { templateUrl: 'views/partials/navbar.html' },
-          sidebar: { templateUrl: 'views/partials/sidebar.html' },
-          footer: { templateUrl: 'views/partials/footer.html' },
           content: {
-            templateUrl: 'views/index.html'
+            templateUrl: 'views/dashboard/index.html'
+          }
+        }
+      });
+
+
+    // Auth States
+    StateProvider
+      .state('auth', {
+        url: '/auth',
+        views: {
+          content: { template: '<ui-view name="content" />' }
+        }
+      })
+
+      .state('auth.login', {
+        url: '/login',
+        views: {
+          content: {
+            templateUrl: 'views/auth/login'
           }
         }
       })
+
+      ;
 
 
   }]);
