@@ -18,7 +18,21 @@ angular
             templateUrl: 'views/index.html'
           }
         }
-      })
+      });
+
+    StateProvider
+
+      .state('auth_login', {
+        url: '/login',
+        views: {
+          navbar: { templateUrl: 'views/partials/navbar.html' },
+          sidebar: { templateUrl: 'views/partials/sidebar.html' },
+          footer: { templateUrl: 'views/partials/footer.html' },
+          content: {
+            templateUrl: 'views/auth/login.html'
+          }
+        }
+      });
 
 
   }]);
