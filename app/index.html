@@ -13,31 +13,16 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
   </head>
   <body ng-app="warningcomFrontendApp">
-    <!--[if lte IE 8]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+    <ui-view name="header"></ui-view> 
+    <ui-view name="content"></ui-view> 
+    <!-- <ui-view name="footer"></ui-view>  -->
 
-    <!-- Add your site or application content here -->
-    <div class="wrapper">
 
-      <ui-view name="sidebar" />
 
-      <div class="main-panel">
-        
-        <ui-view name="navbar" />
-
-        <div class="content">
-          <div class="container-fluid">
-            <ui-view name="content"/>
-          </div>
-        </div>
-
-        <ui-view name="footer"/>
-
-      </div>
-    </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -67,9 +52,13 @@
     <!-- endbower -->
     <!-- endbuild -->
 
+        <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAT2bVz2Ju-EgMbWUtiQMolMmsHGFS-bxw&callback=initMap" type="text/javascript"></script>
+ -->
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        
         <script src="scripts/app.js"></script>
         <script src="scripts/routes.js"></script>
+        <script src="scripts/controllers/warningnews.js"></script>
         <!-- endbuild -->
 </body>
 </html>

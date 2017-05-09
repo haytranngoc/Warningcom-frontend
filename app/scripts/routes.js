@@ -8,31 +8,50 @@ angular
 
     StateProvider
 
-      .state('homepage', {
+      .state('login', {
         url: '/',
         views: {
-          navbar: { templateUrl: 'views/partials/navbar.html' },
-          sidebar: { templateUrl: 'views/partials/sidebar.html' },
-          footer: { templateUrl: 'views/partials/footer.html' },
+          header: { templateUrl: 'views/partials/header.html'},
+          footer: { templateUrl: 'views/partials/footer.html'},
           content: {
-            templateUrl: 'views/index.html'
+            templateUrl: 'views/dashboard/index.html'
           }
         }
       });
 
+
+    // Auth States
     StateProvider
-
-      .state('auth_login', {
-        url: '/login',
+      .state('auth/login', {
+        url: '/auth',
         views: {
-          navbar: { templateUrl: 'views/partials/navbar.html' },
-          sidebar: { templateUrl: 'views/partials/sidebar.html' },
-          footer: { templateUrl: 'views/partials/footer.html' },
-          content: {
-            templateUrl: 'views/auth/login.html'
+          header: { templateUrl: 'views/partials/header.html'},
+          footer: { templateUrl: 'views/partials/footer.html'},
+          content: { 
+            templateUrl: 'views/auth/login.html' 
           }
         }
       });
+
+      //dashboard
+    StateProvider
+      .state('dashboard/news', {
+        url: '/dashboard',
+        views: {
+          header: { templateUrl: 'views/partials/header.html'},
+          footer: { templateUrl: 'views/partials/footer.html'},
+          content: { 
+            templateUrl: 'views/dashboard/news.html',
+            controller: 'NewsCtrl',
+            controllerAs: 'newsCtrl' 
+          }
+        }
+      });
+
+    
+
+
+    
 
 
   }]);

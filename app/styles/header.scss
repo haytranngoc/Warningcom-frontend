@@ -1,0 +1,359 @@
+.header {
+  box-shadow: 0 10px 20px 0 rgba(0,0,0,0.05);
+
+  &.inverse {
+    background-color: #022d58;
+
+    .top-header {
+      .brand .title {
+        color: #fff;
+      }
+
+      .auth .auth-item a {
+        color: #ecf0f1;
+
+        &:hover {
+          color: #fff;
+        }
+      }
+
+      .hamburger {
+        border-color: #fff;
+
+        .lines {
+          background-color: #fff;
+
+          &:before, &:after {
+            background-color: #fff;
+          }
+        }
+      }
+
+      .search-wrapper {
+        .search-group {
+          border-color: #2c3e50;
+        }
+      }
+
+    }
+
+  }
+
+  .top-header {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+
+    .hamburger {
+      display: none;
+      cursor: pointer;
+      position: absolute;
+      right: -15px;
+      margin: 15px;
+      width: 50px;
+      height: 50px;
+      border-radius: 4px;
+      border: 2px solid #1abc9c;
+
+      &:hover {
+
+      }
+
+      .lines {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 50%;
+        height: 4px;
+        border-radius: 2px;
+        background-color: #1abc9c;
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: -10px;
+          width: 50%;
+          height: 4px;
+          border-radius: 2px;
+          background-color: #1abc9c;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          top: 10px;
+          width: 80%;
+          height: 4px;
+          border-radius: 2px;
+          background-color: #1abc9c;
+        }
+
+      }
+    }
+
+    .hidden-panel {
+      display: none;
+      position: absolute;
+      top: 80px;
+      left: -15px;
+      right: -15px;
+      background-color: #34495e;
+      padding: 15px;
+      z-index: 1000;
+
+      &.ng-enter,
+      &.ng-move,
+      &.ng-leave {
+        opacity: 0;
+        transition: 0.2s all ease-in-out;
+      }
+
+      &.ng-enter.ng-enter-active,
+      &.ng-move.ng-move-active,
+      &.ng-leave {
+        opacity: 1;
+      }
+
+      &.ng-enter,
+      &.ng-move,
+      &.ng-leave.ng-leave-active {
+        opacity: 0;
+      }
+
+    }
+
+    .brand {
+      display: inline-flex;
+      flex-direction: row;
+
+      .logo {
+        height: 80px;
+        padding: 15px 0;
+
+        img {
+          height: 100%;
+        }
+      }
+
+      .title {
+        flex-grow: 1;
+        padding: 30px 15px;
+        font-size: 20px;
+        line-height: 20px;
+        color: #34495e;
+      }
+    }
+
+
+
+    .auth {
+      display: flex;
+      height: 80px;
+
+      .auth-item {
+        display: flex;
+        font-size: 16px;
+        line-height: 20px;
+        padding: {
+          top: 15px;
+          left: 15px;
+          bottom: 15px;
+        }
+
+        a {
+          display: inline-block;
+          margin: auto;
+          color: #3498db;
+          text-decoration: none;
+          &:hover {
+            color: #2980b9;
+          }
+        }
+      }
+
+      &.auth-user {
+        position: relative;
+        cursor: pointer;
+
+        .auth-user-wrapper {
+          display: flex;
+          padding: 15px 0;
+
+          &:hover {
+            background-color: #2c3e50;
+          }
+
+          .avatar {
+            margin: 0 10px;
+            overflow: hidden;
+            border-radius: 100%;
+            box-shadow: 0 3px 10px 0 rgba(0,0,0,0.12);
+
+            img {
+              width: 50px;
+              height: 50px;
+              object-fit: cover;
+            }
+          }
+
+          .info {
+            color: #fafafa;
+            display: flex;
+            flex-direction: column;
+            span {
+              flex: 1;
+              &.name {
+                font-weight: 700;
+                padding-top: 4px;
+              }
+              &.role {
+                color: #bdc3c7;
+                padding-bottom: 4px;
+              }
+            }
+
+          }
+
+          .icon {
+            display: flex;
+            padding: 0 10px;
+
+            .fa {
+              color: #fff;
+              margin: auto;
+            }
+          }
+        }
+
+        .dropdown-list {
+          position: absolute;
+          top: 78px;
+          right: 0;
+          left: 0;
+          border-radius: 0;
+          background-color: #fefefe;
+          padding: 0;
+          z-index: 100;
+          box-shadow: 0 10px 20px 0 rgba(0,0,0,0.1);
+
+          .dropdown-item {
+            display: block;
+            padding: 16px;
+            border-bottom: 1px solid #ccc;
+
+            &:last-child {
+              border-bottom: none;
+            }
+
+            .fa {
+              margin-right: 4px;
+            }
+
+          }
+
+        }
+
+      }
+
+
+    }
+
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    .top-header {
+
+      .search-wrapper {
+        display: none;
+      }
+
+      .auth {
+        display: none;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .hidden-panel {
+        display: block;
+
+        .search-wrapper {
+          padding: 0;
+          display: block;
+
+          .search-group {
+            .search-input {
+              input {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }
+}
+
+
+.search-wrapper {
+  padding: 15px;
+  display: flex;
+  flex: 1;
+
+  .search-group {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    background-color: #fff;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px 0 rgba(0,0,0,0.05);
+
+    .search-icon {
+      display: flex;
+      padding: 0 16px;
+
+      .fa {
+        font-size: 20px;
+        display: inline-block;
+        margin: auto;
+      }
+
+    }
+
+    .search-input {
+      display: flex;
+      flex: 1;
+      padding: 5px 0;
+
+      input {
+        height: 40px;
+        line-height: 40px;
+        font-size: 20px;
+        box-shadow: none;
+        border: none;
+      }
+    }
+
+    .float-button-right {
+      padding: 5px;
+      .btn {
+        outline: none;
+        height: 40px;
+        line-height: 40px;
+        padding: 0 20px;
+        font-size: 16px;
+        box-shadow: none;
+
+        &:active {
+
+        }
+      }
+    }
+
+  }
+}

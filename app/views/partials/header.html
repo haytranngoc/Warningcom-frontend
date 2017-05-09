@@ -1,0 +1,83 @@
+<div class="header inverse" ">
+  <div class="container">
+    <header class="top-header">
+
+      <a ui-sref="welcome" class="brand">
+        <div class="logo">
+          <img src="images/logo.gif" alt="X23 Team Logo">
+        </div>
+        <div class="title">
+          <strong>Warning</strong>COM
+        </div>
+      </a>
+
+      <form class="search-wrapper" ">
+        <div class="search-group">
+          <div class="search-icon">
+            <i class="fa fa-search"></i>
+          </div>
+          <div class="search-input">
+            <input type="search" class="form-control" placeholder="What do you want to search?">
+          </div>
+          <div class="float-button-right">
+            <button type="submit" class="btn btn-deep btn-search-group">Search</button>
+          </div>
+        </div>
+      </form>
+
+      <div class="auth" ">
+        <div class="auth-item">
+          <a ui-sref="auth_login">Login</a>
+        </div>
+        <div class="auth-item">
+          <a ui-sref="auth_register">Register</a>
+        </div>
+      </div>
+
+      <div class="auth auth-user btn-group" ">
+        <div class="auth-user-wrapper" data-toggle="dropdown">
+          <div class="avatar">
+           <img ng-src="images/logo.gif" alt="User Avatar">
+          </div>
+          <div class="info">
+            <!-- <span class="name">{{ headerCtrl.profile.email }}</span>
+            <span class="role">{{ headerCtrl.profile.role_name }}</span> -->
+          </div>
+          <div class="icon">
+            <i class="fa fa-caret-down"></i>
+          </div>
+        </div>
+        <ul class="dropdown-list dropdown-menu">
+          <a class="dropdown-item" ui-sref="profile.me">
+            <i class="fa fa-gear"></i>
+            <span>PROFILE</span>
+          </a>
+          <li class="dropdown-item">
+            <button class="btn btn-danger btn-block btn-lg">LOG OUT</button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="hamburger" >
+        <span class="lines"></span>
+      </div>
+
+      <div class="hidden-panel" >
+        <div class="search-wrapper">
+          <div class="search-group">
+            <div class="search-icon">
+              <i class="fa fa-search"></i>
+            </div>
+            <div class="search-input">
+              <input type="search" class="form-control" placeholder="What do you want to search?">
+            </div>
+            <div class="float-button-right">
+              <button class="btn btn-deep btn-search-group">Search</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </header>
+  </div>
+</div>
