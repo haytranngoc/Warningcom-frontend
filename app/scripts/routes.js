@@ -8,9 +8,11 @@ angular
 
     StateProvider
 
-      .state('homepage', {
+      .state('login', {
         url: '/',
         views: {
+          header: { templateUrl: 'views/partials/header.html'},
+          footer: { templateUrl: 'views/partials/footer.html'},
           content: {
             templateUrl: 'views/dashboard/index.html'
           }
@@ -20,23 +22,36 @@ angular
 
     // Auth States
     StateProvider
-      .state('auth', {
+      .state('auth/login', {
         url: '/auth',
         views: {
-          content: { template: '<ui-view name="content" />' }
-        }
-      })
-
-      .state('auth.login', {
-        url: '/login',
-        views: {
-          content: {
-            templateUrl: 'views/auth/login'
+          header: { templateUrl: 'views/partials/header.html'},
+          footer: { templateUrl: 'views/partials/footer.html'},
+          content: { 
+            templateUrl: 'views/auth/login.html' 
           }
         }
-      })
+      });
 
-      ;
+      //dashboard
+    StateProvider
+      .state('dashboard/news', {
+        url: '/dashboard',
+        views: {
+          header: { templateUrl: 'views/partials/header.html'},
+          footer: { templateUrl: 'views/partials/footer.html'},
+          content: { 
+            templateUrl: 'views/dashboard/news.html',
+            controller: 'NewsCtrl',
+            controllerAs: 'newsCtrl' 
+          }
+        }
+      });
+
+    
+
+
+    
 
 
   }]);
