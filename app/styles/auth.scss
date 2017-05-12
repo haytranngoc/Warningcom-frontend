@@ -1,0 +1,64 @@
+.auth-page {
+  background-color: #ecf0f1;
+
+  .login-wrapper {
+    padding: 32px;
+    padding-top: 50px;
+
+    .auth-box {
+      margin: auto;
+      width: 380px;
+      padding: 24px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 15px 30px 0 rgba(0,0,0,0.1);
+
+      header {
+        text-align: center;
+        padding: 10px 0;
+
+      }
+
+      section.content {
+
+        .submit-row {
+          margin-top: 30px;
+        }
+
+      }
+
+    }
+  }
+
+}
+
+
+@media screen and (max-width: 425px) {
+  .auth-page {
+    background-color: #ecf0f1;
+
+    .login-wrapper {
+      height: calc(100vh - 80px);
+      padding: 24px;
+
+      .auth-box {
+        width: 100%;
+
+        header {
+
+
+          h2 {
+            font-size: 20px;
+            font-weight: 700;
+            margin: 0;
+            padding: 8px 0 16px 0;
+          }
+        }
+
+        
+
+      }
+    }
+
+  }
+}

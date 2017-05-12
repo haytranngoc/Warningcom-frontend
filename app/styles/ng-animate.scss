@@ -1,0 +1,48 @@
+@mixin ngFade() {
+
+  &.ng-enter,
+  &.ng-move,
+  &.ng-leave {
+    opacity: 0;
+    transition: 0.4s all ease-in-out;
+  }
+
+  &.ng-enter.ng-enter-active,
+  &.ng-move.ng-move-active,
+  &.ng-leave {
+    opacity: 1;
+  }
+
+  &.ng-enter,
+  &.ng-move,
+  &.ng-leave.ng-leave-active {
+    opacity: 0;
+  }
+
+}
+
+@mixin ngFadeZoom() {
+
+  &.ng-enter,
+  &.ng-move,
+  &.ng-leave {
+    opacity: 0;
+    transform: scale(1.5, 1.5);
+    transition: 0.4s all ease-in-out;
+  }
+
+  &.ng-enter.ng-enter-active,
+  &.ng-move.ng-move-active,
+  &.ng-leave {
+    opacity: 1;
+    transform: scale(1.0, 1.0);
+  }
+
+  &.ng-enter,
+  &.ng-move,
+  &.ng-leave.ng-leave-active {
+    opacity: 0;
+    transform: scale(1.5, 1.5);
+  }
+
+}

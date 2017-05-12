@@ -8,13 +8,14 @@ angular
 
     StateProvider
 
-      .state('login', {
+      .state('welcome', {
         url: '/',
         views: {
           header: { templateUrl: 'views/partials/header.html'},
           footer: { templateUrl: 'views/partials/footer.html'},
           content: {
-            templateUrl: 'views/dashboard/index.html'
+            templateUrl: 'views/dashboard/index.html',
+            
           }
         }
       });
@@ -22,28 +23,67 @@ angular
 
     // Auth States
     StateProvider
-      .state('auth/login', {
+      .state('auth_login', {
         url: '/auth',
         views: {
           header: { templateUrl: 'views/partials/header.html'},
           footer: { templateUrl: 'views/partials/footer.html'},
           content: { 
-            templateUrl: 'views/auth/login.html' 
+            templateUrl: 'views/auth/login.html',
+            controller: 'LoginCtrl',
+            controllerAs: 'loginCtrl'
+          }
+        },
+        params: {
+          email: null,
+          redirect: null
+        }
+      })  
+
+      .state('auth_register', {
+        url: '/auth/register',
+        views: {
+          header: { templateUrl: 'views/partials/header.html' },
+          footer: { templateUrl: 'views/partials/footer.html' },
+          content: {
+            templateUrl: 'views/auth/register.html',
+            // controller: 'RegisterCtrl',
+            // controllerAs: 'registerCtrl'
           }
         }
       });
 
-      //dashboard
+      //news
     StateProvider
-      .state('dashboard/news', {
+      .state('dashboard', {
         url: '/dashboard',
+        abstract: true,
         views: {
           header: { templateUrl: 'views/partials/header.html'},
           footer: { templateUrl: 'views/partials/footer.html'},
           content: { 
+            templateUrl: 'views/dashboard/layout.html',
+          }
+        }
+      })
+
+      .state('dashboard.news', {
+        url:'/news',
+        views: {
+          content: {
             templateUrl: 'views/dashboard/news.html',
-            controller: 'NewsCtrl',
-            controllerAs: 'newsCtrl' 
+             // controller: 'WarningnewCtrl',
+             // controllerAs: 'warningnewCtrl'
+          }
+        }
+      })
+
+      .state('dashboard.helps', {
+        url:'/helps',
+        views: {
+          content: {
+            templateUrl: 'views/dashboard/helps.html',
+            
           }
         }
       });

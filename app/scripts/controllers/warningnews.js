@@ -9,7 +9,12 @@
  */
 
 
+var WarningnewsCtrl = function () {
+
+};
+
 WarningnewsCtrl.$inject = [
+
 ];
 angular.module('warningcomFrontendApp')
     .controller('WarningnewsCtrl', WarningnewsCtrl);
