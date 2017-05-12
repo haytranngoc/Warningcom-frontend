@@ -1,0 +1,353 @@
+@import "ng-animate.scss";
+@import "_variables";
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+datepicker, ._720kb-datepicker-calendar > * {
+  font-family: inherit;
+  text-transform: uppercase;
+}
+
+.sweet-alert {
+  font-family: inherit !important;
+  padding: 36px;
+
+  button.confirm, button.cancel {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    padding: 14px 30px;
+    text-transform: uppercase;
+  }
+}
+
+@mixin clearfix() {
+  &:before, &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+.pager a {
+  cursor: pointer;
+}
+
+#loading_global {
+  z-index: 100000;
+  position: fixed;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.8);
+  @include ngFadeZoom();
+
+  img {
+    margin: auto;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+html, body {
+  font-family: $font-family;
+  font-size: $global-font-size;
+  overflow-x: hidden;
+}
+
+.html-content {
+
+  *, p {
+    color: #2c3e50 !important;
+  }
+
+  pre, code {
+    font-family: "SF Mono", Menlo, Monaco, Consolas, monospace;
+  }
+
+  table {
+    border-collapse: collapse;
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 4px 8px;
+    }
+  }
+}
+
+.direction-align {
+  @include clearfix();
+
+  .right-align {
+    float: right;
+    display: inline-block;
+
+    .btn {
+      display: inline-block;
+      margin-left: 8px;
+    }
+  }
+}
+
+.btn-padding {
+  padding: 14px 36px;
+}
+
+.btn, .form-control {
+  border-radius: 2px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.1);
+  outline: none;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.form-control {
+  height: 50px;
+  transition: all 0.2s ease-in-out;
+
+  &:focus {
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.1);
+  }
+}
+
+.panel {
+  border: none;
+  box-shadow: 0 10px 20px 0 rgba(0,0,0,0.1);
+}
+
+.btn-spid {
+  color: #fff;
+  background-color: #2980b9;
+  border-color: #16a085;
+
+  &:hover, &:focus {
+    color: #fff;
+    // background-color: #16a085;
+  }
+
+  &:active {
+    color: #fff;
+    background-color: #2980b9;
+  }
+}
+
+.btn-deep {
+  color: #fff;
+  background-color: #34495e;
+  border-color: #34495e;
+
+  &:hover, &:focus {
+    color: #fff;
+    // background-color: #16a085;
+  }
+
+  &:active {
+    color: #fff;
+    background-color: #2c3e50;
+  }
+}
+
+.input-wrapper-group {
+  position: relative;
+
+  & + .error-message {
+    padding: 4px 0;
+  }
+
+  .float-icon {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    height: 50px;
+    width: 50px;
+    display: flex;
+
+    &.float-right {
+      right: 0;
+
+      & + .form-control {
+        padding-right: 50px;
+
+        &:focus {
+          padding-right: 50px;
+        }
+      }
+    }
+    &.float-left {
+      left: 0;
+
+      & + .form-control {
+        padding-left: 50px;
+
+        &:focus {
+          padding-left: 50px;
+        }
+      }
+    }
+
+    i.fa {
+
+      display: block;
+      margin: auto;
+    }
+  }
+
+}
+
+.error-message {
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 400;
+  color: #e74c3c;
+  @include ngFade();
+
+  &.center {
+    text-align: center;
+  }
+  &.uppercase {
+    text-transform: uppercase;
+  }
+}
+
+
+.loading {
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 2;
+  }
+}
+
+.loading-indicator {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 100000;
+}
+
+.validation.help-block {
+  color: #E07676;
+  font-style: italic;
+}
+
+.ng-invalid.ng-dirty:not(:focus),
+.ng-invalid.ng-touched:not(:focus) {
+  border-color: #e74c3c;
+}
+
+.ng-valid.ng-dirty.ng-touched {
+  border-color: #2ecc71;
+}
+
+.validation.text-danger {
+  font-style: italic;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ecf0f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #bdc3c7;
+  border-radius: 4px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+$sys-nav-border: 1px solid #eee;
+.navbar-top {
+  background-color: #fafafa;
+  border-bottom: $sys-nav-border;
+
+  .system-nav {
+    display: inline-flex;
+    border: {
+      left: $sys-nav-border;
+    }
+    .nav-item {
+      position: relative;
+      color: #34495e;
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 400;
+      padding: 16px 24px;
+      border-right: $sys-nav-border;
+
+      .fa {
+        margin-right: 6px;
+      }
+
+      &:hover {
+        background-color: #eee;
+      }
+      &:active {
+        background-color: #ecf0f1;
+      }
+
+      &.active:after {
+        content: "";
+        position: absolute;
+        display: block;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background-color: #1abc9c;
+      }
+    }
+  }
+}
+
+.no-match {
+  padding: 20px 0 35px 0;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #7f8c8d;
+  border-bottom: 1px solid #ddd;
+}
+
+.form-group {
+  .control-label {
+    color: #34495e;
+  }
+}
+
+.body-content {
+  min-height: calc(100vh - 80px);
+}
+
+.breadcrumb {
+  background-color: transparent;
+  padding: 16px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 16px;
+}

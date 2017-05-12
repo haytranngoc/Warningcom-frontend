@@ -132,8 +132,35 @@
                     text-decoration: underline;
                   }
                 }
+                .location{
+                  color: #95a5a6;
+                  
+                    &:hover{
+                      text-decoration: underline;
+                    }
+                    i{
+                      color: #e74c3c;
+                    }
+                }
+                .info {
+                  font-size: 12px;
+                  padding: 4px 0;
+                  span {
+                    color: #95a5a6;
+                    &:hover{
+                      text-decoration: underline;
+                    }
+                  }
+
+                }
+
               }
+              
             }
+            .space{
+                padding-top: 10px;
+                padding-bottom: 5px;
+              }
 
           }
           
