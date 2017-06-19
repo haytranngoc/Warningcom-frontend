@@ -11,6 +11,17 @@
 var Post = function (Q ,Rest) {
   var exports = {};
 
+  exports.patch = function (id, payload) {
+    return Q(function (resolve, reject) {
+      Rest.patch('/posts/' + id, payload)
+        .then(function (res) {
+          resolve(res.data);
+        })
+        .catch(function (error) {
+          reject(error.data);
+        });
+    });
+  };
 
   exports.all = function () {
     return Q (function (resolve, reject) {
@@ -36,12 +47,14 @@ var Post = function (Q ,Rest) {
     });
   };
 
+  return exports;
+
 
 };
 
-Post.$inject = [ 
+Post.$inject = [
   '$q' , 'Rest'
 ];
 
 angular.module('warningcomFrontendApp')
-  .factory('Post',Post);
+  .factory('Post', Post);

@@ -1,30 +1,37 @@
 <header class="panel-header">
   <h3>News</h3>
-  
+
 </header>
 <hr>
 <div class="panel-content">
   <div class="list-layout">
-    
-    <div class="list-item" >
+
+    <div class="list-item"  ng-repeat="item in warningnewCtrl.types">
       <div class="course-horizon">
         <div class="cover">
           <img src="http://lorempixel.com/300/300/" alt="">
         </div>
-        <div class="content">
-          <h3>Accident</h3>
-          <span class="location"><i class="fa fa-map-marker"></i> address</span>
+        <a href="#">{{iteam.address}}</a>
+        <!-- <div class="content">
+          <h3><span class="location"><i class="fa fa-map-marker"></i> {{ item.address }}</span></h3>
           <div class="info">
             <span>by</span>
-            <span>haytran@gmail.com</span>
+            <span>{{ item.field.email }}</span>
           </div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente ex recusandae amet rerum quas provident iusto eum blanditiis sequi consequuntur magnam quaerat, ab temporibus laborum magni quidem ducimus culpa! Harum.</p>
-        </div>
+          <p>{{ item.content }}</p>
+          <p>{{ item.lng  }}</p>
+          <p>{{ item.lat }}</p>
+        </div> -->
       </div>
       <div class="space">
         <button type="button" class="btn btn-primary">Accept</button>
-        <button type="button" class="btn btn-danger">Delete</button>
+        <button type="button" class="btn btn-danger" ng-click="warningnewCtrl.delete(item)">Delete</button>
       </div>
     </div>
+
+    <!-- <div class="list-item"  ng-repeat="item in warningnewCtrl.news">
+      <a href="#">{{item.name}}</a>
+
+    </div> -->
   </div>
 </div>
