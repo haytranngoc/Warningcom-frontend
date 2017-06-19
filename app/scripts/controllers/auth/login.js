@@ -52,7 +52,7 @@ var LoginCtrl = function (Auth, Account, Cookies, Http, RootScope, Scope, State,
             if (StateParams.redirect) {
               State.go(StateParams.redirect.name);
             } else {
-              State.go('index');
+              State.go('dashboard.news');
             }
 
           });
