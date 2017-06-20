@@ -8,6 +8,7 @@
  * Controller of the warningcomFrontendApp
  */
 
+var WarningnewsCtrl = function(){};
 
 WarningnewsCtrl.$inject = [
 ];
