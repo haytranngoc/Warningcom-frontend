@@ -15,9 +15,8 @@ angular
           footer: { templateUrl: 'views/partials/footer.html'},
           content: {
             templateUrl: 'views/welcome/main.html',
-            // controller: 'WelcomeCtrl',
-            // controllerAs: 'welcomeCtrl'
-
+            controller: 'MapCtrl',
+            controllerAs: 'mapCtrl'
           }
         }
       });
@@ -170,9 +169,3 @@ angular
   //   });
 
   // }])
-
-
-
-
-
-

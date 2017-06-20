@@ -21,14 +21,14 @@ angular
     'ui.router'
   ])
 
-  .config(['$locationProvider', function (LocationProvider) {
+  .config(['$locationProvider', function(LocationProvider) {
 
     // LocationProvider.html5Mode(true);
 
   }])
 
   // Configuring Default Header
-  .run(['$cookies', '$http', function (Cookies, Http) {
+  .run(['$cookies', '$http', function(Cookies, Http) {
 
     var auth = Cookies.getObject('auth');
 
@@ -38,15 +38,14 @@ angular
 
   }])
 
-  .run(['$cookies', '$rootScope', function (Cookies, RootScope) {
+  .run(['$cookies', '$rootScope', function(Cookies, RootScope) {
 
     RootScope.auth = Cookies.getObject("auth");
 
-    RootScope.toggleLoading = function (enable) {
+    RootScope.toggleLoading = function(enable) {
       RootScope.isLoading = enable;
     };
 
   }])
 
-  ;
-
+  .constant("GOOGLE_API_KEY", "AIzaSyCUXckkHnR2iu5D_e72NO3SGyv24dasuME");
