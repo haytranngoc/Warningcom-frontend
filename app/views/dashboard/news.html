@@ -1,59 +1,37 @@
-<div class="navbar-top">
-  <div class="container">
-    <nav class="system-nav">
-      <a ui-sref="" ui-sref-active="active" class="nav-item">
-        <i class="fa fa-exclamation-triangle" aria-hidden="true" ></i>
-        <span>WARNING NEWS</span>
-      </a>
-      <a ui-sref="" ui-sref-active="active" class="nav-item">
-        <i class="fa fa-sun-o" aria-hidden="true" ></i>
-        <span>WEATHER NEWS</span>
-      </a>
-      <a ui-sref="" ui-sref-active="active" class="nav-item">
-        <i class="fa fa-user-o" aria-hidden="true" ></i>
-        <span>HEPLE ME</span>
-      </a>
-    </nav>
-  </div>
-</div>
+<header class="panel-header">
+  <h3>News</h3>
 
+</header>
+<hr>
+<div class="panel-content">
+  <div class="list-layout">
 
-
-<div class="forum-wrapper" >
-  <div class="container">
-    
-    <div class="split-panel row">
-
-      <div class="panel-left col-sm-4">        
-      </div>
-
-
-      <div class="panel-right col-sm-8">
-        <header class="panel-header">
-          <h3>News</h3>
-          
-        </header>
-        <hr>
-        <div class="panel-content">
-          <div class="list-layout">
-            
-            <div class="list-item" >
-              <div class="course-horizon">
-                <div class="cover">
-                  <img src="http://lorempixel.com/300/300/" alt="">
-                </div>
-                <div class="content">
-                  <h3>Accident</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente ex recusandae amet rerum quas provident iusto eum blanditiis sequi consequuntur magnam quaerat, ab temporibus laborum magni quidem ducimus culpa! Harum.</p>
-                </div>
-               
-              </div>
-            </div>
-
-          </div>
+    <div class="list-item"  ng-repeat="item in warningnewCtrl.types">
+      <div class="course-horizon">
+        <div class="cover">
+          <img src="http://lorempixel.com/300/300/" alt="">
         </div>
+        <a href="#">{{iteam.address}}</a>
+        <!-- <div class="content">
+          <h3><span class="location"><i class="fa fa-map-marker"></i> {{ item.address }}</span></h3>
+          <div class="info">
+            <span>by</span>
+            <span>{{ item.field.email }}</span>
+          </div>
+          <p>{{ item.content }}</p>
+          <p>{{ item.lng  }}</p>
+          <p>{{ item.lat }}</p>
+        </div> -->
+      </div>
+      <div class="space">
+        <button type="button" class="btn btn-primary">Accept</button>
+        <button type="button" class="btn btn-danger" ng-click="warningnewCtrl.delete(item)">Delete</button>
       </div>
     </div>
-  </div>
 
+    <!-- <div class="list-item"  ng-repeat="item in warningnewCtrl.news">
+      <a href="#">{{item.name}}</a>
+
+    </div> -->
+  </div>
 </div>

@@ -1,0 +1,127 @@
+@media screen and (min-width: 768px) {
+
+  #create_lecture_modal .modal-dialog  {
+    width: 1260px;
+  }
+
+}
+
+.header-compose-page {
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+  h2 {
+    color: #34495e;
+  }
+}
+
+.course-compose-page {
+  display: flex;
+
+  h2 {
+    color: #34495e;
+  }
+
+  .modal {
+    .modal-content {
+      border-radius: 0;
+      background-color: #1abc9c;
+    }
+  }
+
+  .input-compose-group {
+    .form-group {
+      textarea {
+        resize: none;
+      }
+    }
+  }
+  .compose-options {
+    // margin-top: 50px;
+
+    .lecture-list {
+
+
+      .list-item {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 16px;
+        border: 1px solid #ccc;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.05);
+        transition: box-shadow 0.2s ease-in-out;
+        border-radius: 2px;
+
+        &:active, &:hover {
+          box-shadow: 0 15px 30px 0 rgba(0,0,0,0.1);
+        }
+
+        .header-left {
+          width: 50px;
+          overflow: hidden;
+          padding: 8px;
+          color: #34495e;
+          font-weight: 700;
+          font-size: 18px;
+          background-color: #ccc;
+        }
+        .item-content {
+          position: relative;
+          padding: 12px;
+          flex: 1;
+
+          h3 {
+            margin: 0;
+            font-size: 18px;
+            line-height: 23px;
+            font-weight: 700;
+            color: #34495e;
+          }
+          p {
+            margin: 0;
+            margin-top: 8px;
+            color: #7f8c8d;
+            font-size: 12px;
+          }
+
+        }
+        .button-group {
+          position: absolute;
+          top: 4px;
+          right: 4px;
+
+          button {
+            color: #34495e;
+            box-shadow: none;
+            border: 1px solid #ecf0f1;
+            border-radius: 2px;
+            background-color: #fff;
+
+            &:hover {
+              background-color: #fafafa;
+            }
+
+            &:active {
+              background-color: #ecf0f1;
+            }
+          }
+        }
+      }
+    }
+    .form-group {
+
+    }
+  }
+
+  .compose-containt {
+    width: 700px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.1);
+    h2 {
+      padding-bottom: 10px;
+    }
+
+  }
+}

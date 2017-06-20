@@ -1,0 +1,37 @@
+<div class="navbar-top">
+  <div class="container">
+    <nav class="system-nav">
+      <a  ui-sref-active="active" ui-sref="dashboard.news" class="nav-item">
+        <i class="fa fa-exclamation-triangle" aria-hidden="true" ></i>
+        <span>WARNING NEWS</span>
+      </a>
+      <a  ui-sref-active="active" class="nav-item">
+        <i class="fa fa-sun-o" aria-hidden="true" ></i>
+        <span>WEATHER NEWS</span>
+      </a>
+      <a ui-sref-active="active" ui-sref="dashboard.helps" class="nav-item">
+        <i class="fa fa-user-o" aria-hidden="true" ></i>
+        <span>HEPLE ME</span>
+      </a>
+    </nav>
+  </div>
+</div>
+
+
+
+<div class="forum-wrapper" >
+  <div class="container">
+
+    <div class="split-panel row">
+
+      <div class="panel-left ">
+      </div>
+
+
+      <div class="panel-right ">
+        <ui-view name="content"></ui-view>
+      </div>
+    </div>
+  </div>
+
+</div>

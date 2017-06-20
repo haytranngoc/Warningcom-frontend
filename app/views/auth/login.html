@@ -1,17 +1,54 @@
-<div class="container">
+<div class="auth-page">
+  <div class="login-wrapper">
+    <div class="auth-box" ng-class="{'loading': loginCtrl.loading}">
 
-  <div class="login">   
-    <form>
-      <div class="form-group">
-        <label for="exampleInputEmail1">Email</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-      </div>
-      <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-      </div>
-      <button type="submit" class="btn btn-default">Submit</button>
-    </form>
+      <!-- header -->
+      <header>
+        <!-- <div class="logo">
+          <img src="images/logo.gif" alt="">
+        </div> -->
+        <h2>LOG IN</h2>
+      </header><!-- /header -->
+
+      <!-- .content -->
+      <section class="content">
+
+        <form id="form_login" ng-submit="loginCtrl.loading == false && loginCtrl.submit()" >
+
+          <div class="form-group">
+            <div class="error-message center uppercase" ng-if="loginCtrl.error">
+              {{ loginCtrl.error.message }}
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="input-wrapper-group">
+              <div class="float-icon float-left">
+                <i class="fa fa-envelope"></i>
+              </div>
+              <input type="email" id="input_email" name="email" class="form-control" placeholder="Email" autocomplete="false" autofocus ng-model="loginCtrl.credential.email">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="input-wrapper-group">
+              <div class="float-icon float-left">
+                <i class="fa fa-lock"></i>
+              </div>
+              <input type="password" id="input_password" name="password" class="form-control" placeholder="Password" ng-model="loginCtrl.credential.password">
+            </div>
+          </div>
+
+          <div class="form-group submit-row">
+            <button type="submit" class="btn btn-spid btn-block btn-lg" ng-disabled="loginCtrl.loading">
+              <i class="fa fa-spin fa-spinner" ng-if="loginCtrl.loading" ></i>
+              <span>LOG IN</span>
+            </button>
+          </div>
+
+        </form>
+
+      </section><!-- /.content -->
+    </div>
   </div>
 </div>
-
