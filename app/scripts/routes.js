@@ -22,6 +22,22 @@ angular
         }
       });
 
+      // Weather
+      StateProvider
+
+      .state('weather', {
+        url: '/weather/index',
+        views: {
+          header: { templateUrl: 'views/partials/header.html'},
+          footer: { templateUrl: 'views/partials/footer.html'},
+          content: {
+            templateUrl: 'views/weather/index.html',
+            // controller: 'MapCtrl',
+            // controllerAs: 'mapCtrl'
+
+          }
+        }
+      });
 
     // Auth States
     StateProvider

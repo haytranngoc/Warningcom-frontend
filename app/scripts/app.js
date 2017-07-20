@@ -48,5 +48,6 @@ angular
 
   }])
 
+  .constant("GOOGLE_API_KEY", "AIzaSyCUXckkHnR2iu5D_e72NO3SGyv24dasuME");
+  
   ;
-
