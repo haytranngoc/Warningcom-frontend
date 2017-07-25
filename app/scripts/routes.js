@@ -11,8 +11,8 @@ angular
       .state('welcome', {
         url: '/',
         views: {
-          header: { templateUrl: 'views/partials/header.html'},
-          footer: { templateUrl: 'views/partials/footer.html'},
+          header: { templateUrl: 'views/partials/header.html' },
+          footer: { templateUrl: 'views/partials/footer.html' },
           content: {
             templateUrl: 'views/welcome/main.html',
             // controller: 'WelcomeCtrl',
@@ -22,18 +22,18 @@ angular
         }
       });
 
-      // Weather
-      StateProvider
+    // Weather
+    StateProvider
 
       .state('weather', {
         url: '/weather/index',
         views: {
-          header: { templateUrl: 'views/partials/header.html'},
-          footer: { templateUrl: 'views/partials/footer.html'},
+          header: { templateUrl: 'views/partials/header.html' },
+          footer: { templateUrl: 'views/partials/footer.html' },
           content: {
             templateUrl: 'views/weather/index.html',
-            // controller: 'MapCtrl',
-            // controllerAs: 'mapCtrl'
+            controller: 'MapCtrl',
+            controllerAs: 'mapCtrl'
 
           }
         }
@@ -44,8 +44,8 @@ angular
       .state('auth_login', {
         url: '/auth',
         views: {
-          header: { templateUrl: 'views/partials/header.html'},
-          footer: { templateUrl: 'views/partials/footer.html'},
+          header: { templateUrl: 'views/partials/header.html' },
+          footer: { templateUrl: 'views/partials/footer.html' },
           content: {
             templateUrl: 'views/auth/login.html',
             controller: 'LoginCtrl',
@@ -59,27 +59,27 @@ angular
         middleware: 'guess'
       })
 
-      // .state('auth_register', {
-      //   url: '/auth/register',
-      //   views: {
-      //     header: { templateUrl: 'views/partials/header.html' },
-      //     footer: { templateUrl: 'views/partials/footer.html' },
-      //     content: {
-      //       templateUrl: 'views/auth/register.html',
-      //       // controller: 'RegisterCtrl',
-      //       // controllerAs: 'registerCtrl'
-      //     }
-      //   }
-      // });
+    // .state('auth_register', {
+    //   url: '/auth/register',
+    //   views: {
+    //     header: { templateUrl: 'views/partials/header.html' },
+    //     footer: { templateUrl: 'views/partials/footer.html' },
+    //     content: {
+    //       templateUrl: 'views/auth/register.html',
+    //       // controller: 'RegisterCtrl',
+    //       // controllerAs: 'registerCtrl'
+    //     }
+    //   }
+    // });
 
-      //news
+    //news
     StateProvider
       .state('dashboard', {
         url: '/dashboard',
         abstract: true,
         views: {
-          header: { templateUrl: 'views/partials/header.html'},
-          footer: { templateUrl: 'views/partials/footer.html'},
+          header: { templateUrl: 'views/partials/header.html' },
+          footer: { templateUrl: 'views/partials/footer.html' },
           content: {
             templateUrl: 'views/dashboard/layout.html',
           }
@@ -87,19 +87,19 @@ angular
       })
 
       .state('dashboard.news', {
-        url:'/news',
+        url: '/news',
         views: {
           content: {
             templateUrl: 'views/dashboard/news.html',
-             controller: 'WarningnewCtrl',
-             controllerAs: 'warningnewCtrl'
+            controller: 'WarningnewCtrl',
+            controllerAs: 'warningnewCtrl'
           }
         },
         middleware: 'admin'
       })
 
       .state('dashboard.helps', {
-        url:'/helps',
+        url: '/helps',
         views: {
           content: {
             templateUrl: 'views/dashboard/helps.html',
@@ -107,7 +107,7 @@ angular
           }
         }
       });
-    }])
+  }])
 
   //     .run(['$cookies', '$rootScope', '$state', function (Cookies, RootScope, State) {
 
